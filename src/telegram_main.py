@@ -38,12 +38,7 @@ def main():
     app = Application.builder().token(telegram_token).build()
 
     # Import handlers
-    from src.telegram_bot.bot import (
-        start_handler,
-        help_handler,
-        mi_farmacia_handler,
-        error_handler,
-    )
+    from src.telegram_bot.bot import error_handler, help_handler, mi_farmacia_handler, start_handler
 
     # Register handlers
     app.add_handler(CommandHandler("start", start_handler))
